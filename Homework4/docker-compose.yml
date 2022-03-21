@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  discovery-server:
+    image: discovery-server
+    ports:
+      - 8761:8761
+  all-parkings:
+    image: all-parkings
+    depends_on:
+      - discovery-server
+    ports:
+      - 8090:8090
+  parking_application:
+    build: parking_application/
+    links:
+      - discovery-server
+      - all-parkings
+    depends_on:
+      - discovery-server
+      - all-parkings
+    ports:
+      - 9090:9090

@@ -1,0 +1,82 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org">
+    <br>
+    <div class="row">
+        <div class="jumbotron col-md-5">
+            <form action="/parking/add" method="POST" style="color:grey">
+                <input id="id" type="hidden" name="id" th:value="(${parking} != null ? ${parking.getId()} : '')">
+                <div class="form-group">
+                    <label for="name">Parking name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                           name="name"
+                           th:value="(${parking} != null ? ${parking.getName()} : '')"
+                           required
+                           placeholder="Enter parking name">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Parking city</label>
+                    <input type="text"
+                           class="form-control"
+                           id="city"
+                           name="city"
+                           th:value="(${parking} != null ? ${parking.getCity()} : '')"
+                           required
+                           placeholder="Enter parking city">
+                </div>
+                <div class="form-group">
+                    <label for="address">Parking address</label>
+                    <input type="text"
+                           class="form-control"
+                           id="address"
+                           name="address"
+                           th:value="(${parking} != null ? ${parking.getAddress()} : '')"
+                           required
+                           placeholder="Enter parking address">
+                </div>
+                <div class="form-group">
+                    <label for="address">Parking latitude</label>
+                    <input type="text"
+                           class="form-control"
+                           id="latitude"
+                           name="latitude"
+                           th:value="(${parking} != null ? ${parking.getLatitude()} : '')"
+                           required
+                           placeholder="Enter parking latitude">
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Parking longitude</label>
+                    <input type="text"
+                           class="form-control"
+                           id="longitude"
+                           name="longitude"
+                           th:value="(${parking} != null ? ${parking.getLongitude()} : '')"
+                           required
+                           placeholder="Enter parking longitude">
+                </div>
+                <div class="form-group">
+                    <label for="rating">Parking rating</label>
+                    <input type="text"
+                           class="form-control"
+                           id="rating"
+                           name="rating"
+                           th:value="(${parking} != null ? ${parking.getRating()} : '')"
+                           required
+                           placeholder="Enter parking rating">
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-5">
+                    <button id="submit" type="submit" class="btn btn-lg bg-teal">Submit</button>
+                    </div>
+                    <div class="col-md-5">
+                    <a type="button" class="bg-teal text-light btn btn-lg" href="javascript:history.back()">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

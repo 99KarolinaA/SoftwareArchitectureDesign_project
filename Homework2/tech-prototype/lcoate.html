@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locate</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>Log</title>
+    <link rel="stylesheet" type="text/css" href="locate.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="home.css" media="screen"/>
+</head>
+<body>
+
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            Your Parking Compass
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="#" >Log in</a>
+        <a href="register.html">Register</a>
+        <a href="#" >Locate</a>
+    </div>
+</div>
+
+<div class="grid">
+
+    <form action="https://httpbin.org/post" method="POST" class="form login">
+
+        <div class="form__field">
+            <span>City Filtering: </span>
+            <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Do you want to filter per city?</span></label>
+            <input id="login__password1" type="text" name="location" class="form__input" placeholder="Enter city name.." required>
+        </div>
+
+        <div class="form__field">
+            <span>Location:     </span>
+            <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Enter yout location</span></label>
+            <input id="login__password" type="text" name="location" class="form__input" placeholder="Enter location.." required>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
